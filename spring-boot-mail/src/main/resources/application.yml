@@ -2,8 +2,8 @@ spring:
   mail:
     host: smtp.163.com
     port: 25
-    username: springbootcourse@163.com
-    password: 授权码，不是邮箱登录密码
+    username: jason18826233123@163.com
+    password: AEYLSTBDBLEXGGRG            #授权码，不是邮箱登录密码
     default-encoding: UTF-8
     properties:
       mail: 
@@ -12,3 +12,5 @@ spring:
         starttls:
           enable: true
           required: true
+server:
+  port: 9001
