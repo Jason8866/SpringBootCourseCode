@@ -1,3 +1,5 @@
 spring:
   quartz:
     job-store-type: memory
+server:
+  port: 9002

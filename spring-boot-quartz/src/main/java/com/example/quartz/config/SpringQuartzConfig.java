@@ -16,7 +16,7 @@ public class SpringQuartzConfig {
 	@Bean
 	JobDetailFactoryBean jobDetail() {
 		JobDataMap jobDataMap = new JobDataMap();
-		jobDataMap.put("name", "Kevin Zhang");
+		jobDataMap.put("name", "jason");
 
 		JobDetailFactoryBean bean = new JobDetailFactoryBean();
 		

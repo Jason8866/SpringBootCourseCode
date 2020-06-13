@@ -8,7 +8,7 @@ import org.springframework.scheduling.quartz.QuartzJobBean;
 
 /**
  * 使用Spring提供的Quartz集成API方式
- * @author Kevin
+ * @author fengzhicheng
  *
  */
 public class SpringQuartzJob extends QuartzJobBean {
