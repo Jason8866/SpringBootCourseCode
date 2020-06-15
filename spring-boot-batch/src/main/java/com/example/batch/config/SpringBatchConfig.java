@@ -22,7 +22,7 @@ import com.example.batch.entity.User;
 
 /**
  * Spring Batch示例
- * @author Kevin
+ * @author jason
  *
  */
 @Configuration
@@ -44,6 +44,7 @@ public class SpringBatchConfig {
 		FlatFileItemReader<User> reader = new FlatFileItemReader<User>();
 		reader.setLinesToSkip(1);// 跳过表头
 		reader.setResource(new ClassPathResource("user.csv"));
+		reader.setEncoding("UTF-8");
 
 		reader.setLineMapper(new DefaultLineMapper<User>() {// entity与csv数据做映射
 			{
@@ -82,7 +83,8 @@ public class SpringBatchConfig {
 	 */
 	@Bean
 	Step myStep(FlatFileItemReader<User> reader, JdbcBatchItemWriter<User> writer) {
-		return stepBuilderFactory.get("myStep")
+		reader.setEncoding("UTF-8");
+		return stepBuilderFactory.get("myStep3")
 				.<User, User>chunk(2)
 				.reader(reader)
 				.writer(writer)
@@ -94,7 +96,7 @@ public class SpringBatchConfig {
 	 * @return
 	 */
 	@Bean
-	Job myJob(Step step) {
+	Job myJob1(Step step) {
 		return jobBuilderFactory.get("myJob")
 				.start(step)
 				.build();
