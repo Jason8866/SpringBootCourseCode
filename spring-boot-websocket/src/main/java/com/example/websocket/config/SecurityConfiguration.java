@@ -17,9 +17,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		.passwordEncoder(new BCryptPasswordEncoder())
 		.withUser("admin").password(new BCryptPasswordEncoder().encode("admin")).roles("ADMIN", "USER")
 		.and()
-		.withUser("kevin").password(new BCryptPasswordEncoder().encode("6998")).roles("USER")
+		.withUser("jason").password(new BCryptPasswordEncoder().encode("123456")).roles("USER")
 		.and()
-		.withUser("roy").password(new BCryptPasswordEncoder().encode("3525")).roles("OTHER");
+		.withUser("horse").password(new BCryptPasswordEncoder().encode("123456")).roles("OTHER");
 	}
 	
 	@Override
