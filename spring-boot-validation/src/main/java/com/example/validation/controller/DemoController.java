@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/demo/")
 public class DemoController {
 
-    @ApiOperation(value = "对你说Hello", notes = "根据传入的用户名，向你说Hello。")
+    @ApiOperation(value = "对你说Hello", notes = "根据传入的用户名，向你说Hello！")
     @ApiImplicitParam(name = "name", value = "用户名", required = true, dataType = "String")
     @GetMapping("/sayHello")
     public String sayHello(@RequestParam(value="name") String name) {
